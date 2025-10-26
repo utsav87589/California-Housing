@@ -7,3 +7,8 @@
 
 -setting up the project, files
 -first look at the data
+
+### Day 2 update
+
+-started FE, EDA part and handled the categorical feature(only one in this dataset)
+-made the new columns with the correlation
