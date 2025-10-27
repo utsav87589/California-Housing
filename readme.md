@@ -12,3 +12,8 @@
 
 -started FE, EDA part and handled the categorical feature(only one in this dataset)
 -made the new columns with the correlation
+
+### Day 3 update
+
+-featured enginerring finished, clean copy for tree made
+-copy for the distamce based algo half done
