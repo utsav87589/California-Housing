@@ -16,4 +16,9 @@
 ### Day 3 update
 
 -featured enginerring finished, clean copy for tree made
--copy for the distamce based algo half done
+-copy for the distance based algo half done
+
+### Day 4 update
+
+-copy for the distance based algos done
+-setup for the model testing also done, one already tested(baseline check)
