@@ -22,3 +22,8 @@
 
 -copy for the distance based algos done
 -setup for the model testing also done, one already tested(baseline check)
+
+### Day 5 update
+
+-tree based model preidctions done,
+-problem occured for the scaler for the distance based models, fix tomorrow
