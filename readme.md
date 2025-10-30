@@ -27,3 +27,8 @@
 
 -tree based model preidctions done,
 -problem occured for the scaler for the distance based models, fix tomorrow
+
+### Day 6 update
+
+-fixed the scaler
+-all the predictions done, including the ANN as well
