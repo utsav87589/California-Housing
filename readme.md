@@ -32,3 +32,8 @@
 
 -fixed the scaler
 -all the predictions done, including the ANN as well
+
+### Day 7 update
+
+-finished the preidctions after swapping the datasets, i.e, scaling for tree and vice versa
+-Hypothesis confirmed for why distance based models rely on scaling and tree do not
