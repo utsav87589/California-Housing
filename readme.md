@@ -37,3 +37,8 @@
 
 -finished the preidctions after swapping the datasets, i.e, scaling for tree and vice versa
 -Hypothesis confirmed for why distance based models rely on scaling and tree do not
+
+### Day 8 update
+
+-finished the Unsupvised ML part
+-only reports left
