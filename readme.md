@@ -42,3 +42,9 @@
 
 -finished the Unsupvised ML part
 -only reports left
+
+### Day 9 update
+
+-Dataset finished, all the unsupervised and supervised ML part done.
+-Reporting done.
+-Will revisit this dataset in the future for the improvements or something new.
