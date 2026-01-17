@@ -25,3 +25,14 @@ def get_shape(df) :
 def get_info(df) : 
 
      return df.info()
+
+
+### function to drop the particular column
+def drop_cols(df, col) : 
+
+     df.drop(col, axis = 1, inplace = True)
+
+### function to save the data to the given path
+def save_data(df, df_path) : 
+
+     df.to_csv(df_path, index = False)     
