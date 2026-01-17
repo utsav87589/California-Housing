@@ -9,17 +9,10 @@ def load_data(df_path) :
 
      return df
 
-### function to check the nan values in the dataset
-def get_nan(df) : 
+### function to check the nan values and the shape of the dataset
+def get_nan_shape(df) : 
 
-     return df.isna().sum()
-
-
-### function to check the shape
-def get_shape(df) : 
-
-     return df.shape
-
+     print(f"shape : {df.shape} \n{df.isna().sum()}")
 
 ### function to check the info
 def get_info(df) : 
