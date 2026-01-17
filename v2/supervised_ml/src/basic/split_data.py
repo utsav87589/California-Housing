@@ -23,3 +23,14 @@ def split_data_locally(df, target_feature) :
     X_train, X_test, y_train, y_test = train_test_split(X, y, random_state = 42, test_size = 0.25)
 
     return X_train, X_test, y_train, y_test
+
+
+### function to verify the split by checking the shape for the global split
+def check_global_split(train, valid) : 
+
+    print(f"train shape : {train.shape} :: valid shape : {valid.shape}")
+
+
+### function to verify the split by checkin the shape for the local split
+def check_local_split(X_train, X_test, y_train, y_test) : 
+    print(f"{X_train.shape} : {y_train.shape} :: {X_test.shape} : {y_test.shape}")
