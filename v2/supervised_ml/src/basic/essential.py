@@ -10,9 +10,9 @@ def load_data(df_path) :
      return df
 
 ### function to check the nan values and the shape of the dataset
-def get_nan_shape(df) : 
+def get_nan_duplicates_shape(df) : 
 
-     print(f"shape : {df.shape} \n{df.isna().sum()}")
+     print(f"shape : {df.shape} \n{df.duplicated().sum()} \n{df.isna().sum()}")
 
 ### function to check the info
 def get_info(df) : 
