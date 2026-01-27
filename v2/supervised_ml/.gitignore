@@ -3,3 +3,9 @@ test_files/
 __pycache__/
 
 *.pyc
+
+data/model_ready/
+
+transformers/
+
+scalers/
