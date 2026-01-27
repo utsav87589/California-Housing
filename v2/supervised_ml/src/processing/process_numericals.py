@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import scipy.stats as stat
 import pylab
 import seaborn as sns
+from sklearn.preprocessing import PowerTransformer
+import joblib
 
 
 ### function to plot the qq plot, distribution plot and the box plot for the numerical columns
@@ -34,4 +36,12 @@ def plot_graphs(df) :
         plt.show()
 
 
+### function to apply and save the boxcox transformation on the given columns and save the transformer
+def apply_transform_boxcox(df, cols, path_for_transformer) : 
 
+    boxcox = PowerTransformer(method = 'boxcox')
+
+    for col in cols : 
+        df[col + '_boxcox'] = boxcox.fit_transform(df[col])
+
+    joblib.dump(boxcox, path_for_transformer)
