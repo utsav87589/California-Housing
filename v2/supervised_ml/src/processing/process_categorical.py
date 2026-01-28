@@ -34,7 +34,13 @@ def apply_label_encoding(df, col, labels) :
 
 
 ### function to compare the nunique and valu_counts pre, post label encoding
-def nunique_value_pre_post_labelling(nunique_value_pre, nunique_value_post) : 
+def nunique_value_counts_compare(df, df_copy, col) : 
 
-    print(f"labels before : \n{nunique_value_pre}")
-    print(f"labels after : \n{nunique_value_post}")
+    nunique_main = df[col].nunique()
+    value_counts_main = df[col].value_counts()
+
+    nunique_copy = df_copy[col].nunique()
+    value_counts_copy = df_copy[col].value_counts()
+
+    print(f"before : \nNo. of categories : {nunique_copy} \nvalue_counts : \n{value_counts_copy}")
+    print(f"after : \nNo. of categories : {nunique_main} \nvalue_counts : \n{value_counts_main}")
