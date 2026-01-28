@@ -1,0 +1,57 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import pylab
+import matplotlib.pyplot as plt
+import scipy.stats as stat
+
+
+### function to plot the qq plot, distribution plot and the box plot for the numerical columns
+def plot_graphs(df) : 
+
+    cols = df.select_dtypes(include = ['float64'])
+
+    for col in cols : 
+
+        print(f"column : {col}")
+        plt.figure(figsize = (12, 4))
+
+        #---------first plot, which is a hist plot        
+        plt.subplot(1, 3, 1)
+        plt.title('Hist plot')
+        df[col].hist()
+
+        #----------second one, which is a qq plot
+        plt.subplot(1, 3, 2)
+        plt.title('QQ plot')
+        stat.probplot(df[col], dist = 'norm', plot = pylab)
+        
+        #----------third plot, box plot
+        plt.subplot(1, 3, 3)
+        plt.title('Boxplot')
+        sns.boxplot(df[col])
+
+        plt.show()
+
+### function to plot the box plots for the features after scaling/transformations to verify the things
+def plot_graphs_post_operations(df, df_copy) : 
+
+    cols = df.select_dtypes(include = ['float64'])    
+
+    for col in cols : 
+
+        plt.figure(figsize = (8, 4))
+        plt.subplot(1, 2, 1)
+        plt.title(col)
+        sns.boxplot(df[col])
+        plt.xlabel("")
+        plt.ylabel("")
+
+        plt.subplot(1, 2, 2)
+        plt.title('Boxplot')
+        sns.boxplot(df_copy[col])
+        plt.xlabel("")
+        plt.ylabel("")
+
+
+    plt.show()
