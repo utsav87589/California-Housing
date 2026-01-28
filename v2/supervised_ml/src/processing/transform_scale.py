@@ -9,9 +9,7 @@ def apply_transform_boxcox(df, cols) :
 
     for col in cols : 
 
-        df[col + '_boxcox'], parameter = boxcox(df[col] + 1)
-        df.drop(col, axis = 1, inplace = True)
-
+        df[col], parameter = boxcox(df[col] + 1)
 
 ### function to remove the additional outliers i.e. between 3 standard deviation to the right and left for the boxcox column
 def remove_outliers(df, cols) : 
@@ -26,3 +24,7 @@ def remove_outliers(df, cols) :
 
         df[col] = df[col].apply(lambda x : upper_limit if x > upper_limit else x)
         df[col] = df[col].apply(lambda x : lower_limit if x < lower_limit else x)
+
+
+### function to scale the data and save the scaler on the train data.
+# def apply_scaler(df, cols, scaler_path = None) : 
