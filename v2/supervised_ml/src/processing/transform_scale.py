@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import boxcox
 import joblib
+from sklearn.preprocessing import MinMaxScaler
 
 
 ### function to apply thr boxcox transformation
@@ -27,4 +28,11 @@ def remove_outliers(df, cols) :
 
 
 ### function to scale the data and save the scaler on the train data.
-# def apply_scaler(df, cols, scaler_path = None) : 
+def scale_train(df, cols_to_scale, scaler_path) : 
+
+    scaler = MinMaxScaler(feature_range = (0, 1))
+
+    df[cols_to_scale] = scaler.fit_transform(df[cols_to_scale])
+    joblib.dump(scaler, scaler_path)
+
+
