@@ -36,3 +36,9 @@ def scale_train(df, cols_to_scale, scaler_path) :
     joblib.dump(scaler, scaler_path)
 
 
+### function to scale the valid data, by loading the scaler that was already fit on the train data
+def scale_valid(df, cols_to_scale, scaler_path) : 
+
+    scaler = joblib.load(scaler_path)
+    df[cols_to_scale] = scaler.fit_transform(df[cols_to_scale])
+
