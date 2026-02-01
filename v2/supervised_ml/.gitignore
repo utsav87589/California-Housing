@@ -3,5 +3,3 @@ test_files/
 __pycache__/
 
 *.pyc
-
-models/
